@@ -15,9 +15,25 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "MFD Creative Staging",
+  metadataBase: new URL(
+    process.env.VERCEL_PROJECT_PRODUCTION_URL
+      ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+      : "http://localhost:3000",
+  ),
+  title: {
+    default: "MFD Creative Staging",
+    template: "%s | MFD Creative Staging",
+  },
   description:
-    "Premium home staging services to sell your property faster and for more.",
+    "Melbourne's premium home staging service. We transform properties into buyer-ready homes that sell faster and for more.",
+  openGraph: {
+    type: "website",
+    siteName: "MFD Creative Staging",
+    locale: "en_AU",
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
 };
 
 export default function RootLayout({
@@ -28,7 +44,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${playfair.variable} ${inter.variable} h-full antialiased`}
+      className={`${playfair.variable} ${inter.variable} h-full antialiased overflow-x-hidden`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>

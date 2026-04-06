@@ -141,9 +141,9 @@ export default function HeroSlideshow() {
       ))}
 
       {/* Bottom gradient — lifts text content */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent pointer-events-none" />
+      <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent pointer-events-none" />
       {/* Top gradient — ensures nav text always has contrast */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/10 to-transparent pointer-events-none" />
+      <div className="absolute inset-0 bg-linear-to-b from-black/50 via-black/10 to-transparent pointer-events-none" />
 
       {/* Text content */}
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 pointer-events-none">

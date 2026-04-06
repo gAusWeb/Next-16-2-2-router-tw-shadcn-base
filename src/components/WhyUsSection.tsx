@@ -15,7 +15,7 @@ export default function WhyUsSection() {
     <section id="about" className="bg-neutral-50 py-24 px-6">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         {/* Image */}
-        <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
+        <div className="relative w-full aspect-4/3 rounded-2xl overflow-hidden shadow-xl">
           <Image
             src="https://picsum.photos/seed/stagingroom/900/675"
             alt="Beautifully staged living room"
@@ -61,7 +61,7 @@ export default function WhyUsSection() {
           <ul className="flex flex-col gap-3">
             {reasons.map((reason) => (
               <li key={reason} className="flex items-start gap-3">
-                <span className="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-black flex items-center justify-center">
+                <span className="mt-0.5 shrink-0 w-5 h-5 rounded-full bg-black flex items-center justify-center">
                   <Check className="w-3 h-3 text-white" />
                 </span>
                 <span className="text-sm text-black/70 leading-relaxed">
